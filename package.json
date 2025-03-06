@@ -1,0 +1,15 @@
+{
+  "name": "learn-react",
+  "version": "1.0.0",
+  "description": "My personal repository for learning and experimenting with React.",
+  "workspaces": [
+    "projects/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
