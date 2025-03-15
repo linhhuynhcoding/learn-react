@@ -1,0 +1,231 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background: rgb(238,174,202);
+  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: flex-start normal; 
+  align-items: center;
+  align-content: space-between;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.title {
+  font-size: 1.5em;
+  color: #7a0a4a;
+  margin: 30px 0 0 0;
+
+}
+
+.caro-box {
+  display: grid;
+  border: #7a0a4a 2px solid;
+  border-radius: 8px;
+  margin: 20px 0;
+  width: 400px;
+  height: 400px;
+  background-color: #ac206f;
+  box-shadow: #7a0a4a 0 0 10px;
+
+  grid-template-rows: 50px 6fr;
+  /* align-items: stretch; */
+  /* justify-items: stretch; */
+  padding: 30px;
+
+  align-items: stretch;
+}
+
+.name-broad {
+  display: grid;
+  /* background-color: #f9f9f9; */
+  grid-template-columns: repeat(2, 1fr);  
+  column-gap: 10px;
+  height: 100%;
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+.name-broad-player {
+
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 5fr 15px 3fr;
+  font-size:  1em;
+  /* height: 100%; */
+  /* background-color: palegoldenrod; */
+  column-gap: 0px;
+
+  /* overflow: hidden; */
+
+  align-items: center;
+  justify-items: center;
+
+  color: #f9f9f9;
+}
+
+.name-broad-player.active {
+  color: #fecfef;
+
+  border: 2px solid #fecfef;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px #fecfef;
+}
+
+.name-broad-player h5 {
+  margin: 0;
+}
+
+.name-broad-player span:nth-child(3) {
+  font-weight: 300;
+
+}
+.name-broad-player span:nth-child(3):hover {
+  cursor: pointer;
+}
+.name-broad-player span {
+  font-size: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.game-board{
+  padding: 20px 40px 0 40px;
+  display: grid;
+  /* grid-template-columns:repeat(3, 1fr); */
+  grid-template-rows:repeat(3, 1fr);
+  /* column-gap: 10px; */
+  row-gap: 10px;
+}
+
+.row {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    column-gap: 10px;
+    align-items: stretch;
+}
+
+.cell {
+  display: flex;
+  background-color: #fecfef;
+  box-shadow: #7a0a4a 0 0 10px;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 4em;
+  color: #7a0a4a;
+}
+
+.over-box {
+  display: flex;
+  background-color: #550a2a;
+  box-shadow: #7a0a4a 0 0 10px;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* margin-top: 150px; */
+  /* margin-bottom: 150px; */
+  opacity: 0.95;
+
+  width: 350px;
+  height: 350px;
+  justify-self: center;
+  align-self: center;
+  padding: 100px;
+  align-items: center;
+  /* align-content: space-around; */
+  justify-content: space-around;
+  flex-direction: column;
+
+  animation-duration: 0.7s;
+  animation-name: pop-up;
+  animation-timing-function: ease;
+}
+
+@keyframes pop-up {
+  0%{
+    transform: scale(0.5);
+  }
+
+  60%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+
+.over-box h1 {
+  color: #fecfef;
+  font-size: 3em;
+  /* margin: 0; */
+}
+.over-box h3 {
+  color: white;
+  /* font-size: 3em; */
+  /* margin: 0; */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
