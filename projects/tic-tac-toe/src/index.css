@@ -130,6 +130,23 @@ button:focus-visible {
 .name-broad-player span:nth-child(3):hover {
   cursor: pointer;
 }
+
+.name-broad-player input {
+  font: inherit;
+  text-align: left;
+  /* font-weight: 600; */
+  max-width: inherit;
+  max-height: inherit;
+  padding: inherit;
+  margin: inherit;
+  field-sizing: content;
+  width: 50%;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+
+}
+
 .name-broad-player span {
   font-size: 12px;
   text-align: left;
